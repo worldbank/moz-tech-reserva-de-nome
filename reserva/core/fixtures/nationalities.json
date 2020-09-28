@@ -1,0 +1,1542 @@
+[
+{
+    "model": "core.nationality",
+    "pk": 1,
+    "fields": {
+        "name": "Afegã(o)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 2,
+    "fields": {
+        "name": "Sul-africano(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 3,
+    "fields": {
+        "name": "Albanês(esa)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 4,
+    "fields": {
+        "name": "Alemã(ão)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 5,
+    "fields": {
+        "name": "Andorrano(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 6,
+    "fields": {
+        "name": "Angolano(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 7,
+    "fields": {
+        "name": "Anguilano(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 8,
+    "fields": {
+        "name": "Antiguano(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 9,
+    "fields": {
+        "name": "Antilhano(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 10,
+    "fields": {
+        "name": "Árabe-saudita"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 11,
+    "fields": {
+        "name": "Argelino(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 12,
+    "fields": {
+        "name": "Argentino(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 13,
+    "fields": {
+        "name": "Arménio(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 14,
+    "fields": {
+        "name": "Arubano(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 15,
+    "fields": {
+        "name": "Australiano(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 16,
+    "fields": {
+        "name": "Austríaco(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 17,
+    "fields": {
+        "name": "Azeri"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 18,
+    "fields": {
+        "name": "Baamiano(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 19,
+    "fields": {
+        "name": "Barenita"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 20,
+    "fields": {
+        "name": "Bangladechiano(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 21,
+    "fields": {
+        "name": "Barbadense"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 22,
+    "fields": {
+        "name": "Belga"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 23,
+    "fields": {
+        "name": "Belizenho(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 24,
+    "fields": {
+        "name": "Benineseo(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 25,
+    "fields": {
+        "name": "Bermudense"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 26,
+    "fields": {
+        "name": "Bielorrusso(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 27,
+    "fields": {
+        "name": "Boliviano(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 28,
+    "fields": {
+        "name": "Bósnio(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 29,
+    "fields": {
+        "name": "Botsuano(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 30,
+    "fields": {
+        "name": "Brasileiro(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 31,
+    "fields": {
+        "name": "Bruneíno(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 32,
+    "fields": {
+        "name": "Búlgaro(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 33,
+    "fields": {
+        "name": "Burquino(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 34,
+    "fields": {
+        "name": "Burundiano(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 35,
+    "fields": {
+        "name": "Butanês(esa)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 36,
+    "fields": {
+        "name": "Cabo-verdiano(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 37,
+    "fields": {
+        "name": "Camaronês(esa)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 38,
+    "fields": {
+        "name": "Cambojano(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 39,
+    "fields": {
+        "name": "Canadiano(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 40,
+    "fields": {
+        "name": "Cazaque"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 41,
+    "fields": {
+        "name": "Chadiano(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 42,
+    "fields": {
+        "name": "Chileno(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 43,
+    "fields": {
+        "name": "Chinês(esa)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 44,
+    "fields": {
+        "name": "Cipriota"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 45,
+    "fields": {
+        "name": "Colombiano(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 46,
+    "fields": {
+        "name": "Comoriano(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 47,
+    "fields": {
+        "name": "Norte-coreano(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 48,
+    "fields": {
+        "name": "Sul-coreano(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 49,
+    "fields": {
+        "name": "Marfinense"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 50,
+    "fields": {
+        "name": "Costarriquenho(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 51,
+    "fields": {
+        "name": "Croata"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 52,
+    "fields": {
+        "name": "Cubano(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 53,
+    "fields": {
+        "name": "Curaçauense"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 54,
+    "fields": {
+        "name": "Dinamarquês(esa)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 55,
+    "fields": {
+        "name": "Jibutiano(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 56,
+    "fields": {
+        "name": "Dominiquês(esa)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 57,
+    "fields": {
+        "name": "Egípcio(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 58,
+    "fields": {
+        "name": "Salvadorenho(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 59,
+    "fields": {
+        "name": "Emiradense"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 60,
+    "fields": {
+        "name": "Equatoriano(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 61,
+    "fields": {
+        "name": "Eritreu(ia)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 62,
+    "fields": {
+        "name": "Escocês(esa)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 63,
+    "fields": {
+        "name": "Eslovaco(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 64,
+    "fields": {
+        "name": "Esloveno(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 65,
+    "fields": {
+        "name": "Espanhol(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 66,
+    "fields": {
+        "name": "Micronésio(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 67,
+    "fields": {
+        "name": "Norte-americano(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 68,
+    "fields": {
+        "name": "Estónio(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 69,
+    "fields": {
+        "name": "Etíope"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 70,
+    "fields": {
+        "name": "Fijiano(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 71,
+    "fields": {
+        "name": "Filipino"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 72,
+    "fields": {
+        "name": "Finlandês(esa)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 73,
+    "fields": {
+        "name": "Francês(esa)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 74,
+    "fields": {
+        "name": "Gabonês(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 75,
+    "fields": {
+        "name": "Gambiano(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 76,
+    "fields": {
+        "name": "Ganês(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 77,
+    "fields": {
+        "name": "Georgiano(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 78,
+    "fields": {
+        "name": "Granadino(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 79,
+    "fields": {
+        "name": "Grego(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 80,
+    "fields": {
+        "name": "Guadalupense"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 81,
+    "fields": {
+        "name": "Guamês(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 82,
+    "fields": {
+        "name": "Guatemalteco(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 83,
+    "fields": {
+        "name": "Guianês(esa)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 84,
+    "fields": {
+        "name": "Guianense"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 85,
+    "fields": {
+        "name": "Guineano(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 86,
+    "fields": {
+        "name": "Guinéu-equatoriano(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 87,
+    "fields": {
+        "name": "Guineense"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 88,
+    "fields": {
+        "name": "Haitiano(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 89,
+    "fields": {
+        "name": "Hondurenho(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 90,
+    "fields": {
+        "name": "Honconguês(esa)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 91,
+    "fields": {
+        "name": "Húngaro(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 92,
+    "fields": {
+        "name": "Iemenita"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 93,
+    "fields": {
+        "name": "Caimanês(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 94,
+    "fields": {
+        "name": "Cookense"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 95,
+    "fields": {
+        "name": "Faroense"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 96,
+    "fields": {
+        "name": "Salomonense"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 97,
+    "fields": {
+        "name": "Virginense"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 98,
+    "fields": {
+        "name": "Indiano(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 99,
+    "fields": {
+        "name": "Indonésia(o)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 100,
+    "fields": {
+        "name": "Inglês(esa)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 101,
+    "fields": {
+        "name": "Iraniano(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 102,
+    "fields": {
+        "name": "Iraquiano(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 103,
+    "fields": {
+        "name": "Irlandês(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 104,
+    "fields": {
+        "name": "Norte-irlandês(esa)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 105,
+    "fields": {
+        "name": "Islandês(esa)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 106,
+    "fields": {
+        "name": "Israelense"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 107,
+    "fields": {
+        "name": "Italiano(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 108,
+    "fields": {
+        "name": "Jamaicano(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 109,
+    "fields": {
+        "name": "Japonês(esa)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 110,
+    "fields": {
+        "name": "Jordano(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 111,
+    "fields": {
+        "name": "Quiribatiano(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 112,
+    "fields": {
+        "name": "Kosovar"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 113,
+    "fields": {
+        "name": "Kuwaitiano(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 114,
+    "fields": {
+        "name": "Laociano(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 115,
+    "fields": {
+        "name": "Lesotiano(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 116,
+    "fields": {
+        "name": "Letã(o)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 117,
+    "fields": {
+        "name": "Libanês(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 118,
+    "fields": {
+        "name": "Liberiano(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 119,
+    "fields": {
+        "name": "Líbio(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 120,
+    "fields": {
+        "name": "Listenstainiano(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 121,
+    "fields": {
+        "name": "Lituano(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 122,
+    "fields": {
+        "name": "Luxemburguês(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 123,
+    "fields": {
+        "name": "Macaense"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 124,
+    "fields": {
+        "name": "Macedónico(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 125,
+    "fields": {
+        "name": "Malgaxe"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 126,
+    "fields": {
+        "name": "Malaio(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 127,
+    "fields": {
+        "name": "Malauiano(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 128,
+    "fields": {
+        "name": "Maldivo(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 129,
+    "fields": {
+        "name": "Maliano"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 130,
+    "fields": {
+        "name": "Maltês(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 131,
+    "fields": {
+        "name": "Marroquino(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 132,
+    "fields": {
+        "name": "Martinicano(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 133,
+    "fields": {
+        "name": "Mauriciano(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 134,
+    "fields": {
+        "name": "Mauritano(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 135,
+    "fields": {
+        "name": "Mexicano(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 136,
+    "fields": {
+        "name": "Birmanês(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 137,
+    "fields": {
+        "name": "Moçambicano(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 138,
+    "fields": {
+        "name": "Moldavo(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 139,
+    "fields": {
+        "name": "Monegasco(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 140,
+    "fields": {
+        "name": "Mongol"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 141,
+    "fields": {
+        "name": "Montenegrino(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 142,
+    "fields": {
+        "name": "Monserratense"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 143,
+    "fields": {
+        "name": "Namibiano(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 144,
+    "fields": {
+        "name": "Nauruano(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 145,
+    "fields": {
+        "name": "Nepalês(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 146,
+    "fields": {
+        "name": "Nicaraguense"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 147,
+    "fields": {
+        "name": "Nigerino(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 148,
+    "fields": {
+        "name": "Nigeriano(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 149,
+    "fields": {
+        "name": "Norueguês(esa)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 150,
+    "fields": {
+        "name": "Neocaledónio(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 151,
+    "fields": {
+        "name": "Neozelandês(esa)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 152,
+    "fields": {
+        "name": "Omanense"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 153,
+    "fields": {
+        "name": "Galês(esa)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 154,
+    "fields": {
+        "name": "Neerlandês(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 155,
+    "fields": {
+        "name": "Palauano(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 156,
+    "fields": {
+        "name": "Palestiniano(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 157,
+    "fields": {
+        "name": "Panamenho(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 158,
+    "fields": {
+        "name": "Papua"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 159,
+    "fields": {
+        "name": "Paquistanês(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 160,
+    "fields": {
+        "name": "Paraguaio(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 161,
+    "fields": {
+        "name": "Peruano(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 162,
+    "fields": {
+        "name": "Polinésio(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 163,
+    "fields": {
+        "name": "Polaco(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 164,
+    "fields": {
+        "name": "Porto-riquenho(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 165,
+    "fields": {
+        "name": "Português(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 166,
+    "fields": {
+        "name": "Catariano(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 167,
+    "fields": {
+        "name": "Queniano(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 168,
+    "fields": {
+        "name": "Quirguiz"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 169,
+    "fields": {
+        "name": "Britânico(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 170,
+    "fields": {
+        "name": "Centro-africano(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 171,
+    "fields": {
+        "name": "Tcheco(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 172,
+    "fields": {
+        "name": "Taiwanês(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 173,
+    "fields": {
+        "name": "Congolês(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 174,
+    "fields": {
+        "name": "Dominicano(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 175,
+    "fields": {
+        "name": "Romeno(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 176,
+    "fields": {
+        "name": "Ruandês(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 177,
+    "fields": {
+        "name": "Russo(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 178,
+    "fields": {
+        "name": "São-martinhense"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 179,
+    "fields": {
+        "name": "Samoano(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 180,
+    "fields": {
+        "name": "Samoense"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 181,
+    "fields": {
+        "name": "Santa-luciense"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 182,
+    "fields": {
+        "name": "São-cristovense"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 183,
+    "fields": {
+        "name": "São-marinhense"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 184,
+    "fields": {
+        "name": "São-tomense"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 185,
+    "fields": {
+        "name": "São-vicentino(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 186,
+    "fields": {
+        "name": "Senegalês(esa)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 187,
+    "fields": {
+        "name": "Serra-leonês(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 188,
+    "fields": {
+        "name": "Sérvio(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 189,
+    "fields": {
+        "name": "Seichelense"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 190,
+    "fields": {
+        "name": "Singapurense"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 191,
+    "fields": {
+        "name": "Sírio(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 192,
+    "fields": {
+        "name": "Somali"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 193,
+    "fields": {
+        "name": "Cingalês(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 194,
+    "fields": {
+        "name": "Suazilandês(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 195,
+    "fields": {
+        "name": "Sudanês(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 196,
+    "fields": {
+        "name": "Sueco(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 197,
+    "fields": {
+        "name": "Suíço(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 198,
+    "fields": {
+        "name": "Surinamês(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 199,
+    "fields": {
+        "name": "Tajique"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 200,
+    "fields": {
+        "name": "Tailandês"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 201,
+    "fields": {
+        "name": "Tanzaniano(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 202,
+    "fields": {
+        "name": "Timorense"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 203,
+    "fields": {
+        "name": "Togolês(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 204,
+    "fields": {
+        "name": "Tonganês(esa)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 205,
+    "fields": {
+        "name": "Trinitário(a)-tobagense"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 206,
+    "fields": {
+        "name": "Tunisino(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 207,
+    "fields": {
+        "name": "Turquense"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 208,
+    "fields": {
+        "name": "Turquemeno(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 209,
+    "fields": {
+        "name": "Turco(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 210,
+    "fields": {
+        "name": "Tuvaluano(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 211,
+    "fields": {
+        "name": "Ucraniano(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 212,
+    "fields": {
+        "name": "Ugandense"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 213,
+    "fields": {
+        "name": "Uruguaio(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 214,
+    "fields": {
+        "name": "Usbeque"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 215,
+    "fields": {
+        "name": "Vanuatuense"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 216,
+    "fields": {
+        "name": "Vaticano(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 217,
+    "fields": {
+        "name": "Venezuelano(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 218,
+    "fields": {
+        "name": "Vietnamita"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 219,
+    "fields": {
+        "name": "Zambiano(a)"
+    }
+},
+{
+    "model": "core.nationality",
+    "pk": 220,
+    "fields": {
+        "name": "Zimbabuano(a)"
+    }
+}
+]

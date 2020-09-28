@@ -19,10 +19,31 @@
     ```console
     $ poetry run python manage.py migrate
     ```
+1. Carregue as nacionalidades no banco de dados:
+    ```console
+    $ poetry run python manage.py loaddata nationalities.json
+    ```
 1. Colete os arquivos estáticos:
     ```console
     $ poetry run python manage.py collectstatic
     ```
+
+## API Web
+
+### `POST /api/name_available/`
+
+#### Requisção
+
+| Campo  | Tipo  | Descrição                                      |
+| ------ | ----- | ---------------------------------------------- |
+| `name` | `str` | Nome de empresa para consultar disponibilidade |
+
+#### Resposta
+
+| Campo       | Tipo   | Descrição                   |
+| ----------- | ------ | --------------------------- |
+| `name`      | `str`  | Nome de empresa consultado. |
+| `available` | `bool` | Disponibilidade.            |
 
 ## Desenvolvimento
 
