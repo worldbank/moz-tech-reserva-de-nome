@@ -1,3 +1,4 @@
+from django.dispatch import receiver
 from django.db import models
 
 from reserva.core.managers import NameApplicationManager, NationalityManager
@@ -17,6 +18,10 @@ class Nationality(models.Model):
         indexes = [models.Index(fields=["name"])]
 
 
+class NameApplicationError(Exception):
+    pass
+
+
 class NameApplication(models.Model):
     name = models.CharField("Nome da empresa", max_length=256, unique=True)
     applicant = models.CharField("Responsável", max_length=256)
@@ -30,6 +35,15 @@ class NameApplication(models.Model):
     address2 = models.CharField(
         "Endereço (linha 2)", max_length=256, null=True, blank=True
     )
+    approved = models.BooleanField("Aprovado", default=False)
+    approved_by = models.ForeignKey(
+        "auth.User",
+        verbose_name="Aprovado por",
+        null=True,
+        blank=True,
+        on_delete=models.PROTECT,
+    )
+    comments = models.TextField("Comentários", null=True, blank=True)
     created_at = models.DateTimeField("Criado em", auto_now_add=True)
     updated_at = models.DateTimeField("Alterado em", auto_now=True)
 
@@ -46,4 +60,22 @@ class NameApplication(models.Model):
             models.Index(fields=["created_at"]),
             models.Index(fields=["updated_at"]),
             models.Index(fields=["name"]),
+            models.Index(fields=["approved"]),
+            models.Index(fields=["approved_by"]),
         ]
+
+
+@receiver(models.signals.pre_save, sender=NameApplication)
+def manage_approved_by(sender, instance, **kwargs):
+    if not instance.approved:
+        instance.approved_by = None
+        return instance
+
+    if not instance.approved_by:
+        msg = "Cannot approve application without user in `approved_by` field"
+        raise NameApplicationError(msg)
+
+    if not instance.approved_by.is_staff:
+        raise NameApplicationError("Non-staff user cannot approve application.")
+
+    return instance
