@@ -30,7 +30,7 @@
 
 ## API Web
 
-### `POST /api/name_available/`
+### `POST /api/name_application/available/`
 
 #### Requisção
 
