@@ -1,7 +1,7 @@
 import pytest
 from mixer.backend.django import mixer
 
-from reserva.core.forms import CheckForm, SendForm
+from reserva.core.forms import CheckForm, PayForm, SendForm
 from reserva.core.models import NameApplication, Nationality
 
 
@@ -31,3 +31,24 @@ def test_send_form():
     }
     form = SendForm(data)
     assert form.is_valid()
+
+
+@pytest.mark.django_db
+def test_pay_form():
+    name_application = mixer.blend(
+        NameApplication, nationality=Nationality.objects.default()
+    )
+    data = {
+        "name_application": str(name_application.pk),
+        "name": "m nome",
+        "number": "1234 1234 1234 1234",
+        "expiry": "01/1970",
+        "cvv": "123",
+        "address1": "rua 4",
+        "address2": "maputo",
+    }
+    form = PayForm(data)
+    assert form.is_valid()
+    assert form.cleaned_data["name"] == "M NOME"
+    assert form.cleaned_data["number"] == "1234123412341234"
+    assert form.cleaned_data["cvv"] == 123

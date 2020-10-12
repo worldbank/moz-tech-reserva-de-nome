@@ -5,6 +5,9 @@ class NameApplicationQuerySet(models.QuerySet):
     def is_available(self, name):
         return not self.filter(name__iexact=name).exists()
 
+    def pending(self):
+        return self.filter(approved=False)
+
 
 class NationalityQuerySet(models.QuerySet):
     def default(self):
