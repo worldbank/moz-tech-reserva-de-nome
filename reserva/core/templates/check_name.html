@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<h3 class="insider">Reserva de Nome</h3>
+<p class="insider">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, soluta. A illum totam dolore et quasi error, saepe nihil? Ab animi velit, tempore optio recusandae eos sequi laboriosam totam perferendis!</p>
+<div class="steps-container">
+  <hr>
+  <div id="stepProgressBar">
+    <div class="step">
+      <a href="" class="bullet actual">1</a>
+    </div>
+    <div class="step">
+      <a href="" class="bullet">2</a>
+    </div>
+    <div class="step">
+      <a href="" class="bullet">3</a>
+    </div>
+    <div class="step">
+      <a href="" class="bullet">4</a href="">
+    </div>
+    <div class="step">
+      <a href="" class="bullet">5</a>
+    </div>
+  </div>
+</div>
+<span class="step-title">Passo 1</span>
+<h3 class="insider">Consulta de Nome</h3>
+<p class="insider">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae explicabo eum ipsa optio ab aliquam error voluptates, velit et repellat facere laboriosam quia ipsam. Perferendis quaerat impedit atque minus amet?</p>
+<form class="consult-name" action="">
+    <div class="form-label">
+        <label for="available_name">Confira se o nome está disponível</label>
+    </div>
+    <div class="input-button">
+        <input type="text" name="name_to_search" id="">
+        <button type="button" class="inline-button">Buscar</button>
+    </div>
+
+    <div class="warning red">
+        <div>
+            <img src="{% static 'icons/exclamation.svg' %}" class="exclamation" alt="">
+        </div>
+        <div class="text-util">
+          <h4>
+            O nome que você consultou não está disponível.
+            <br>  
+            Por favor consulte por outro nome.
+          </h4>
+        </div>
+    </div>
+
+    <div class="warning green">
+        <div>
+            <img src="{% static 'icons/check.svg' %}" class="check" alt="">
+        </div>
+        <div class="text-util">
+          <h4>
+            O nome que você consultou está disponível.
+          </h4>
+        </div>
+    </div>
+
+    <button type="submit" disabled>Registrar Empresa</button>
+</form>
+{% endblock %}

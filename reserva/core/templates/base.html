@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Portal do Cidadão</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="wrapper">
+      <header>
+        <div class="nav">Menu</div>
+        <div class="content-header">
+          <div class="nav-map">
+            <ul>
+              <li><a href="">Home ></a></li>
+              <li><a href="">Empresas ></a></li>
+              <li><a href="">Criar Empresa</a></li>
+            </ul>
+          </div>
+          <h1>Portal do Cidadão</h1>
+          <h2>Como criar uma empresa</h2>
+          <p>
+            Criar uma empresa é um processo que envolve algumas etapas. 
+            <br> 
+            Nessa página, você encontrará todas as informações necessárias para cumprir cada etapa deste processo.
+          </p>
+        </div>
+        <div class="green-bar"></div>
+      </header>
+      <div class="main-content">
+        <aside>
+          <ul>
+            <div class="item-list selected">
+                <img src="{% static 'icons/triangle.svg' %}" class="triangle" alt="">
+              <li>Reserva de Nome</li>
+            </div>
+            <div class="item-list">
+              <li>Contrato de Sociedade</li>
+            </div>
+            <div class="item-list">
+              <li>Certidão Definitiva</li>
+            </div>
+            <div class="item-list">
+              <li>Publicação no Boletim da República</li>
+            </div>
+            <div class="item-list">
+              <li>Obtenção do Número Único de Identificação tributária</li>
+            </div>
+            <div class="item-list">
+              <li>Licenciamento</li>
+            </div>
+          </ul>
+        </aside>
+        <section>
+          {% block content %}
+          {% endblock %}
+        </section>
+      </div>
+      <div class="warning yellow">
+        <div class="text-util">
+          <h4>Está página foi útil?</h4>
+          <a href="">Yes</a>
+          <a href="">No</a>
+        </div>
+        <div class="something-wrog">
+          <a href="">Algo de errado nessa página?</a>
+        </div>
+      </div>
+      <footer>
+      </footer>
+    </div>
+</body>
+</html>
