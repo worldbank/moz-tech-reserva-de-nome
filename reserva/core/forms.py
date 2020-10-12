@@ -21,3 +21,9 @@ class CheckForm(forms.Form):
         if not NameApplication.objects.is_available(name):
             raise ValidationError("Nome indisponível.", "name_is_not_available")
         return name
+
+
+class SendForm(forms.ModelForm):
+    class Meta:
+        model = NameApplication
+        fields = ("name", "applicant", "dob", "nationality", "address1", "address2")
