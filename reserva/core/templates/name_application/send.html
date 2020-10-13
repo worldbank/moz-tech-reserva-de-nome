@@ -27,4 +27,10 @@
 <h3 class="insider">Requisição de Nome</h3>
 <p class="insider">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae explicabo eum ipsa optio ab aliquam error voluptates, velit et repellat facere laboriosam quia ipsam. Perferendis quaerat impedit atque minus amet?</p>
 
+<form class="send-name-application" action="{% url 'name_application:send' %}" method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Próximo passo</button>
+</form>
+
 {% endblock %}

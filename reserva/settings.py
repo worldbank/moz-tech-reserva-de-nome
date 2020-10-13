@@ -115,3 +115,6 @@ USE_TZ = True
 STATIC_URL = "/static/"
 STATIC_ROOT = BASE_DIR / "staticfiles"
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+
+# Date formats
+DATE_INPUT_FORMATS = ("%d-%m-%Y", "%d/%m/%Y", "%m/%d/%y")

@@ -25,7 +25,7 @@ class NameApplicationError(Exception):
 class NameApplication(models.Model):
     name = models.CharField("Nome da empresa", max_length=256, unique=True)
     applicant = models.CharField("Responsável", max_length=256)
-    dob = models.DateField("Data de nascimento")
+    dob = models.DateField("Data de nascimento (dd/mm/aaaa)")
     nationality = models.ForeignKey(
         "Nationality", verbose_name="Nacionalidade", on_delete=models.PROTECT
     )

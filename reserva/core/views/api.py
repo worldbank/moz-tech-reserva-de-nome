@@ -1,12 +1,11 @@
-from django.http import HttpResponseNotAllowed, JsonResponse
+from django.http import JsonResponse
+from django.views.decorators.http import require_POST
 
 from reserva.core.forms import CheckForm
 
 
+@require_POST
 def available(request):
-    if request.method != "POST":
-        raise HttpResponseNotAllowed(("POST",))
-
     form = CheckForm(request.POST)
     if form.is_valid():
         available = True

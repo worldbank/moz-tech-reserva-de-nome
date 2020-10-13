@@ -5,7 +5,7 @@ from reserva.core.views.name_application import home
 
 
 urlpatterns = [
-    path("/", home, name="home"),
+    path("", home, name="home"),
     path(
         "name_application/",
         include("reserva.core.urls.name_application", namespace="name_application"),

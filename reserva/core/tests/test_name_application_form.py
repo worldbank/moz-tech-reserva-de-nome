@@ -22,7 +22,6 @@ def test_check_form_fail():
 def test_send_form():
     nationality = Nationality.objects.default().pk
     data = {
-        "name": "Minha Empresa",
         "applicant": "Meu Nome",
         "dob": "1970-01-01",
         "nationality": str(nationality),

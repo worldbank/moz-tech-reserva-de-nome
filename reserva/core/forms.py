@@ -28,20 +28,22 @@ class CheckForm(forms.Form):
 class SendForm(forms.ModelForm):
     class Meta:
         model = NameApplication
-        fields = ("name", "applicant", "dob", "nationality", "address1", "address2")
+        fields = ("applicant", "dob", "nationality", "address1", "address2")
 
 
 class PayForm(forms.Form):
-    name_application = forms.ModelChoiceField(NameApplication.objects.pending())
     name = forms.CharField(label="Nome como consta no cartão")
     number = forms.CharField(label="Número do cartão")
     expiry = forms.CharField(label="Data de validade")
     cvv = forms.IntegerField(label="Código de segurança", min_value=100, max_value=999)
-    address1 = forms.CharField(label="Endereço")
-    address2 = forms.CharField()
+    address1 = forms.CharField(label="Endereço (linha 1)")
+    address2 = forms.CharField(label="Endereço (linha 2)")
 
     def clean_name(self):
         return self.cleaned_data.get("name").upper()
 
     def clean_number(self):
-        return re.sub(r"\D", "", self.cleaned_data.get("number"))
+        cleaned = re.sub(r"\D", "", self.cleaned_data.get("number"))
+        if len(cleaned) != 16:
+            raise ValidationError("Número inválido.", "number_is_not_valid")
+        return cleaned

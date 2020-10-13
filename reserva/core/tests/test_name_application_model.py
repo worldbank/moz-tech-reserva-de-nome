@@ -85,3 +85,34 @@ def test_name_application_removed_approval(admin_user):
     assert not obj.approved
     assert not obj.approved_by
     assert obj.comments == "belo nome"
+
+
+@pytest.mark.django_db
+def test_is_available():
+    NameApplication.objects.create(
+        name="minha empresa",
+        applicant="meu nome",
+        dob="1975-09-16",
+        nationality=Nationality.objects.get(name="Moçambicano(a)"),
+    )
+    assert NameApplication.objects.is_available("minha empresa 2")
+    assert not NameApplication.objects.is_available("Minha Empresa")
+    assert not NameApplication.objects.is_available("minha empresa")
+
+
+@pytest.mark.django_db
+def test_pending(admin_user):
+    assert not NameApplication.objects.pending().count()
+    obj = NameApplication.objects.create(
+        name="minha empresa",
+        applicant="meu nome",
+        dob="1975-09-16",
+        nationality=Nationality.objects.get(name="Moçambicano(a)"),
+    )
+    assert NameApplication.objects.pending().count() == 1
+
+    obj.approved = True
+    obj.approved_by = admin_user
+    obj.comments = "belo nome"
+    obj.save()
+    assert not NameApplication.objects.pending().count()
