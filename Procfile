@@ -1,2 +1,2 @@
 release: python manage.py migrate
-web: uvicorn reserva.asgi:application
+web: gunicorn reserva.wsgi --log-file -
