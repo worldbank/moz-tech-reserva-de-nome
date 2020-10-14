@@ -1,5 +1,7 @@
 from django.db import models
 
+from reserva.core.hash_id import hash_id
+
 
 class NameApplicationQuerySet(models.QuerySet):
     def is_available(self, name):
@@ -7,6 +9,10 @@ class NameApplicationQuerySet(models.QuerySet):
 
     def pending(self):
         return self.filter(approved=False)
+
+    def from_hash_id(self, value):
+        pk, *_ = hash_id.decode(value)
+        return self.get(pk=pk)
 
 
 class NationalityQuerySet(models.QuerySet):

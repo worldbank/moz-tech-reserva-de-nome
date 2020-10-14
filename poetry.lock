@@ -231,6 +231,17 @@ setproctitle = ["setproctitle"]
 tornado = ["tornado (>=0.2)"]
 
 [[package]]
+name = "hashids"
+version = "1.3.1"
+description = "Implements the hashids algorithm in python. For more information, visit http://hashids.org/"
+category = "main"
+optional = false
+python-versions = ">=2.7"
+
+[package.extras]
+test = ["pytest (>=2.1.0)"]
+
+[[package]]
 name = "iniconfig"
 version = "1.0.1"
 description = "iniconfig: brain-dead simple config-ini parsing"
@@ -768,7 +779,7 @@ python-versions = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "3.8.6"
-content-hash = "73a1c9c0f8a1b295e5b2c6b3c4b611e36abd4b67ebe2fb56533adb8007ba822e"
+content-hash = "3501b130f7c86209f2c012c12465624ead0e7c9eb57d1add3d4f7250f632ff41"
 
 [metadata.files]
 appdirs = [
@@ -883,6 +894,10 @@ flake8 = [
 gunicorn = [
     {file = "gunicorn-20.0.4-py2.py3-none-any.whl", hash = "sha256:cd4a810dd51bf497552cf3f863b575dabd73d6ad6a91075b65936b151cbf4f9c"},
     {file = "gunicorn-20.0.4.tar.gz", hash = "sha256:1904bb2b8a43658807108d59c3f3d56c2b6121a701161de0ddf9ad140073c626"},
+]
+hashids = [
+    {file = "hashids-1.3.1-py2.py3-none-any.whl", hash = "sha256:8bddd1acba501bfc9306e7e5a99a1667f4f2cacdc20cbd70bcc5ddfa5147c94c"},
+    {file = "hashids-1.3.1.tar.gz", hash = "sha256:6c3dc775e65efc2ce2c157a65acb776d634cb814598f406469abef00ae3f635c"},
 ]
 iniconfig = [
     {file = "iniconfig-1.0.1-py3-none-any.whl", hash = "sha256:80cf40c597eb564e86346103f609d74efce0f6b4d4f30ec8ce9e2c26411ba437"},

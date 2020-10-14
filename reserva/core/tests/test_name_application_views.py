@@ -149,6 +149,8 @@ def test_get_done_with_session(client_with_session):
 
     assert NameApplication.objects.count() == 1
     assert response.status_code == 200
+    assert "Minha Empresa" in response.content.decode("utf8")
+    assert NameApplication.objects.first().hash_id in response.content.decode("utf8")
 
 
 def test_get_done_without_session(client):

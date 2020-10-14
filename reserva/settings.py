@@ -11,9 +11,11 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
+from string import ascii_uppercase, digits
 
 from decouple import Csv, config
 from dj_database_url import parse
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -116,5 +118,12 @@ STATIC_URL = "/static/"
 STATIC_ROOT = BASE_DIR / "staticfiles"
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
+
 # Date formats
 DATE_INPUT_FORMATS = ("%d-%m-%Y", "%d/%m/%Y", "%m/%d/%y")
+
+
+# Hash IDs
+# https://github.com/davidaurelio/hashids-python
+HASH_ID_ALPHABET = digits + ascii_uppercase
+HASH_ID_MIN_LENGTH = 6

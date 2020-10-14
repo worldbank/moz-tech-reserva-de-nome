@@ -1,5 +1,7 @@
 import pytest
 
+from django.conf import settings
+
 from reserva.core.models import NameApplication, NameApplicationError, Nationality
 
 
@@ -14,6 +16,9 @@ def test_name_application():
     )
     assert str(obj) == "minha empresa"
     assert not obj.approved
+    assert isinstance(obj.hash_id, str)
+    assert len(obj.hash_id) >= settings.HASH_ID_MIN_LENGTH
+    assert obj == NameApplication.objects.from_hash_id(obj.hash_id)
 
 
 @pytest.mark.django_db

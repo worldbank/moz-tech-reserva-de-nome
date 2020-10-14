@@ -1,6 +1,7 @@
 from django.dispatch import receiver
 from django.db import models
 
+from reserva.core.hash_id import hash_id
 from reserva.core.managers import NameApplicationManager, NationalityManager
 
 
@@ -43,6 +44,10 @@ class NameApplication(models.Model):
     updated_at = models.DateTimeField("Alterado em", auto_now=True)
 
     objects = NameApplicationManager()
+
+    @property
+    def hash_id(self):
+        return hash_id.encode(self.pk)
 
     def __str__(self):
         return self.name

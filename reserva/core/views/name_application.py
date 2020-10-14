@@ -80,13 +80,14 @@ def done(request):
         raise Http404()
 
     form = SendForm(request.session["form"])
-    assert form.is_valid()
+    assert form.is_valid()  # form was validated before storing in session
 
     name_application = form.save(commit=False)
     name_application.name = request.session["form"]["name"]
     name_application.save()
+    context = {"name_application": name_application}
 
-    return render(request, "name_application/done.html")
+    return render(request, "name_application/done.html", context)
 
 
 @require_GET

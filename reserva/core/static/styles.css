@@ -157,6 +157,10 @@
     line-height: 1.5;
   }
 
+  p.insider code {
+    font-family: monospace;
+  }
+
   p.insider.bold {
     font-weight: bold;
   }
