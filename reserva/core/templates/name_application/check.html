@@ -74,12 +74,12 @@
       notAvailable.style.display = 'none';
       submit.disabled = true;
     } else if (status === true) {
-      available.style.display = 'block';
+      available.style.display = 'flex';
       notAvailable.style.display = 'none';
       submit.disabled = false;
     } else if (status === false) {
       available.style.display = 'none';
-      notAvailable.style.display = 'block';
+      notAvailable.style.display = 'flex';
       submit.disabled = true;
     }
   };
