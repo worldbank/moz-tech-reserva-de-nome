@@ -10,6 +10,7 @@ def test_name_application():
         applicant="meu nome",
         dob="1975-09-16",
         nationality=Nationality.objects.get(name="Moçambicano(a)"),
+        email="meu@no.me",
     )
     assert str(obj) == "minha empresa"
     assert not obj.approved
@@ -22,6 +23,7 @@ def test_name_application_approval(admin_user):
         applicant="meu nome",
         dob="1975-09-16",
         nationality=Nationality.objects.get(name="Moçambicano(a)"),
+        email="meu@no.me",
     )
 
     obj.approved = True
@@ -41,6 +43,7 @@ def test_faild_attempt_name_application_approval(django_user_model):
         applicant="meu nome",
         dob="1975-09-16",
         nationality=Nationality.objects.get(name="Moçambicano(a)"),
+        email="meu@no.me",
     )
 
     obj.approved = True
@@ -62,6 +65,7 @@ def test_faild_attempt_to_create_approved_name_application(django_user_model):
             applicant="meu nome",
             dob="1975-09-16",
             nationality=Nationality.objects.get(name="Moçambicano(a)"),
+            email="meu@no.me",
             approved=True,
         )
     expected = "Cannot approve application without user in `approved_by` field"
@@ -75,6 +79,7 @@ def test_name_application_removed_approval(admin_user):
         applicant="meu nome",
         dob="1975-09-16",
         nationality=Nationality.objects.get(name="Moçambicano(a)"),
+        email="meu@no.me",
         approved=True,
         approved_by=admin_user,
         comments="belo nome",
@@ -94,6 +99,7 @@ def test_is_available():
         applicant="meu nome",
         dob="1975-09-16",
         nationality=Nationality.objects.get(name="Moçambicano(a)"),
+        email="meu@no.me",
     )
     assert NameApplication.objects.is_available("minha empresa 2")
     assert not NameApplication.objects.is_available("Minha Empresa")
@@ -108,6 +114,7 @@ def test_pending(admin_user):
         applicant="meu nome",
         dob="1975-09-16",
         nationality=Nationality.objects.get(name="Moçambicano(a)"),
+        email="meu@no.me",
     )
     assert NameApplication.objects.pending().count() == 1
 

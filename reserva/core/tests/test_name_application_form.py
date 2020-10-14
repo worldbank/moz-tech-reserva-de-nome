@@ -25,8 +25,7 @@ def test_send_form():
         "applicant": "Meu Nome",
         "dob": "1970-01-01",
         "nationality": str(nationality),
-        "address1": "Rua 4",
-        "address2": "Maputo",
+        "email": "meu@no.me",
     }
     form = SendForm(data)
     assert form.is_valid()
@@ -43,8 +42,6 @@ def test_pay_form():
         "number": "1234 1234 1234 1234",
         "expiry": "01/1970",
         "cvv": "123",
-        "address1": "rua 4",
-        "address2": "maputo",
     }
     form = PayForm(data)
     assert form.is_valid()

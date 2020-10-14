@@ -38,8 +38,7 @@ def test_get_send(client_with_session):
     assert "Responsável" in response.content.decode("utf8")
     assert "Data de nascimento" in response.content.decode("utf8")
     assert "Nacionalidade" in response.content.decode("utf8")
-    assert "Endereço (linha 1)" in response.content.decode("utf8")
-    assert "Endereço (linha 2)" in response.content.decode("utf8")
+    assert "E-mail" in response.content.decode("utf8")
 
 
 @pytest.mark.django_db
@@ -51,8 +50,7 @@ def test_post_send_with_error(client_with_session):
                 "applicant": "X",
                 "dob": "123",
                 "nationality": 9999,
-                "address1": "",
-                "address2": "",
+                "email": "not an email",
             }
         )
         response = client.post(reverse("name_application:send"), form)
@@ -68,8 +66,7 @@ def test_post_send(client_with_session):
                 "applicant": "Meu Nome",
                 "dob": "1970-01-01",
                 "nationality": str(Nationality.objects.default().pk),
-                "address1": "Rua 4",
-                "address2": "Maputo",
+                "email": "meu@no.me",
             }
         )
         response = client.post(reverse("name_application:send"), form)
@@ -84,8 +81,7 @@ def test_get_pay(client_with_session):
         "applicant": "Meu Nome",
         "dob": "1970-01-01",
         "nationality": str(Nationality.objects.default().pk),
-        "address1": "Rua 4",
-        "address2": "Maputo",
+        "email": "meu@no.me",
     }
     with client_with_session(form=form) as client:
         response = client.get(reverse("name_application:pay"))
@@ -95,7 +91,6 @@ def test_get_pay(client_with_session):
     assert "Número do cartão" in response.content.decode("utf8")
     assert "Data de validade" in response.content.decode("utf8")
     assert "Código de segurança" in response.content.decode("utf8")
-    assert "Endereço" in response.content.decode("utf8")
 
 
 @pytest.mark.django_db
@@ -105,16 +100,13 @@ def test_post_pay_with_error(client_with_session):
         "applicant": "Meu Nome",
         "dob": "1970-01-01",
         "nationality": str(Nationality.objects.default().pk),
-        "address1": "Rua 4",
-        "address2": "Maputo",
+        "email": "meu@no.me",
     }
     data = {
         "name": "",
         "number": "1234",
         "expiry": "01/1970",
         "cvv": "123",
-        "address1": "rua 4",
-        "address2": "maputo",
     }
     with client_with_session(form=form) as client:
         response = client.post(reverse("name_application:pay"), data)
@@ -129,16 +121,13 @@ def test_post_pay(client_with_session):
         "applicant": "Meu Nome",
         "dob": "1970-01-01",
         "nationality": str(Nationality.objects.default().pk),
-        "address1": "Rua 4",
-        "address2": "Maputo",
+        "email": "meu@no.me",
     }
     data = {
         "name": "m nome",
         "number": "1234 1234 1234 1234",
         "expiry": "01/1970",
         "cvv": "123",
-        "address1": "rua 4",
-        "address2": "maputo",
     }
     with client_with_session(form=form) as client:
         response = client.post(reverse("name_application:pay"), data)
@@ -153,8 +142,7 @@ def test_get_done_with_session(client_with_session):
         "applicant": "Meu Nome",
         "dob": "1970-01-01",
         "nationality": str(Nationality.objects.default().pk),
-        "address1": "Rua 4",
-        "address2": "Maputo",
+        "email": "meu@no.me",
     }
     with client_with_session(form=form) as client:
         response = client.get(reverse("name_application:done"))

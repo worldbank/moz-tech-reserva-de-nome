@@ -29,12 +29,7 @@ class NameApplication(models.Model):
     nationality = models.ForeignKey(
         "Nationality", verbose_name="Nacionalidade", on_delete=models.PROTECT
     )
-    address1 = models.CharField(
-        "Endereço (linha 1)", max_length=256, null=True, blank=True
-    )
-    address2 = models.CharField(
-        "Endereço (linha 2)", max_length=256, null=True, blank=True
-    )
+    email = models.EmailField("E-mail")
     approved = models.BooleanField("Aprovado", default=False)
     approved_by = models.ForeignKey(
         "auth.User",
