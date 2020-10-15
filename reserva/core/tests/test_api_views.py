@@ -11,7 +11,7 @@ from reserva.core.models import NameApplication
 )
 def test_name_exists(client, lookup, expected):
     mixer.blend(NameApplication, name="minha empresa")
-    response = client.post(reverse("name_application_api:available"), {"name": lookup})
+    response = client.get(reverse("name_application_api:available"), {"name": lookup})
     data = response.json()
     assert data["available"] is expected
 
@@ -19,7 +19,7 @@ def test_name_exists(client, lookup, expected):
 @pytest.mark.django_db
 def test_name_exists_is_case_insentive(client):
     mixer.blend(NameApplication, name="minha empresa")
-    response = client.post(
+    response = client.get(
         reverse("name_application_api:available"), {"name": "Minha Empresa"}
     )
     data = response.json()
