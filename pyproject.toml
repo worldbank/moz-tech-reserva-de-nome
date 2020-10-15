@@ -6,7 +6,7 @@ authors = ["World Bank Group <evicentegoncalve@worldbank.org>"]
 license = "MIT"
 
 [tool.poetry.dependencies]
-python = "3.8.6"
+python = "3.9.0"
 dj_database_url = "^0.5.0"
 django = "^3.1.1"
 django-bmemcached = "^0.3.0"
