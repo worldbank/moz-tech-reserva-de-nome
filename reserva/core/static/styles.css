@@ -401,6 +401,14 @@ select {
   justify-content: end;
 }
 
+ul.errorlist {
+  list-style: none;
+  font-weight: normal;
+  font-size: 12px;
+  color: var(--red-medium);
+  margin-top: 0.3rem;
+}
+
 /* FOOTER */
 
 footer {
