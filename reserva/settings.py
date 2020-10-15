@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 from pathlib import Path
 from string import ascii_uppercase, digits
 
-from decouple import Csv, config
+from decouple import Csv, UndefinedValueError, config
 from dj_database_url import parse
 
 
@@ -127,3 +127,22 @@ DATE_INPUT_FORMATS = ("%d-%m-%Y", "%d/%m/%Y", "%m/%d/%y")
 # https://github.com/davidaurelio/hashids-python
 HASH_ID_ALPHABET = digits + ascii_uppercase
 HASH_ID_MIN_LENGTH = 6
+
+
+# Cache
+# https://docs.djangoproject.com/en/3.1/topics/cache/#the-per-view-cache
+# and also https://devcenter.heroku.com/articles/memcachedcloud#django
+
+try:
+    CACHES = {
+        "default": {
+            "BACKEND": "django_bmemcached.memcached.BMemcached",
+            "LOCATION": config("MEMCACHEDCLOUD_SERVERS").split(","),
+            "OPTIONS": {
+                "username": config("MEMCACHEDCLOUD_USERNAME"),
+                "password": config("MEMCACHEDCLOUD_PASSWORD"),
+            },
+        }
+    }
+except UndefinedValueError:
+    pass

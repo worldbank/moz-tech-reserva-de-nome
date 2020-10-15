@@ -1,5 +1,6 @@
-from django.dispatch import receiver
+from django.core.cache import cache
 from django.db import models
+from django.dispatch import receiver
 
 from reserva.core.hash_id import hash_id
 from reserva.core.managers import NameApplicationManager, NationalityManager
@@ -79,3 +80,8 @@ def manage_approved_by(sender, instance, **kwargs):
         raise NameApplicationError("Non-staff user cannot approve application.")
 
     return instance
+
+
+@receiver(models.signals.pre_save, sender=NameApplication)
+def clear_cache(sender, instance, **kwargs):
+    cache.clear()
