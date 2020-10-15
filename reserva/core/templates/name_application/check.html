@@ -61,22 +61,21 @@
 
 <script type="text/javascript">
   const manageWarning = (status) => {
-    console.log("Running manageWarning with", status);  // TODO remove
     const available = document.querySelector(".warning.green");
     const notAvailable = document.querySelector(".warning.red");
     const submit = document.querySelector("button");
 
     if (status === undefined) {
-      available.style.display = 'none';
-      notAvailable.style.display = 'none';
+      available.style.display = "none";
+      notAvailable.style.display = "none";
       submit.disabled = true;
     } else if (status === true) {
-      available.style.display = 'flex';
-      notAvailable.style.display = 'none';
+      available.style.display = "flex";
+      notAvailable.style.display = "none";
       submit.disabled = false;
     } else if (status === false) {
-      available.style.display = 'none';
-      notAvailable.style.display = 'flex';
+      available.style.display = "none";
+      notAvailable.style.display = "flex";
       submit.disabled = true;
     }
   };
@@ -87,16 +86,13 @@
         return manageWarning(undefined);
     }
 
-    const data = new FormData();
-    data.append('name', form.name.value);
-    data.append('csrfmiddlewaretoken', form.csrfmiddlewaretoken.value);
-
     const request = new XMLHttpRequest();
-    request.open("POST", form.dataset.checkUrl, true);
-    request.send(data);
+    let url = form.dataset.checkUrl + "?name=" + encodeURIComponent(form.name.value);
+    request.open("GET", url, true);
+    request.send();
     request.onload = () => {
       if (request.status !== 200) {
-        return undefined;
+        return manageWarning(undefined);
       }
 
       const data = JSON.parse(request.response);
@@ -112,7 +108,7 @@
   if (document.readyState !== "loading"){
     addEventListeners()
   } else {
-    document.addEventListener('DOMContentLoaded', addEventListeners);
+    document.addEventListener("DOMContentLoaded", addEventListeners);
   }
 </script>
 
