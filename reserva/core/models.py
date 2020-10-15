@@ -1,9 +1,23 @@
+from django.contrib import auth
 from django.core.cache import cache
 from django.db import models
 from django.dispatch import receiver
 
 from reserva.core.hash_id import hash_id
 from reserva.core.managers import NameApplicationManager, NationalityManager
+
+
+class User(auth.models.User):
+    @property
+    def name(self):
+        return f"{self.first_name} {self.last_name}".strip()
+
+    def __str__(self):
+        return self.name or self.username
+
+    class Meta:
+        proxy = True
+        ordering = ("first_name", "last_name", "username")
 
 
 class Nationality(models.Model):
@@ -34,7 +48,7 @@ class NameApplication(models.Model):
     email = models.EmailField("E-mail")
     approved = models.BooleanField("Aprovado", default=False)
     approved_by = models.ForeignKey(
-        "auth.User",
+        "core.User",
         verbose_name="Aprovado por",
         null=True,
         blank=True,
