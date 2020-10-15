@@ -30,15 +30,11 @@
     {% csrf_token %}
     <div class="form-label">
       <label for="{{ form.name.id_for_label }}">{{ form.name.label }}</label>
-    </div>
-    <div class="input-button">
       <input type="text" name="name" id="{{ form.name.id_for_label }}">
-      <button disabled type="submit" class="inline-button">Buscar</button>
     </div>
-
-    <div class="warning red">
+      <div class="warning red">
         <div>
-            <img src="{% static 'icons/exclamation.svg' %}" class="exclamation" alt="">
+          <img src="{% static 'icons/exclamation.svg' %}" class="exclamation" alt="">
         </div>
         <div class="text-util">
           <h4>
@@ -47,18 +43,19 @@
             Por favor consulte por outro nome.
           </h4>
         </div>
-    </div>
-
-    <div class="warning green">
+      </div>
+      
+      <div class="warning green">
         <div>
-            <img src="{% static 'icons/check.svg' %}" class="check" alt="">
+          <img src="{% static 'icons/check.svg' %}" class="check" alt="">
         </div>
         <div class="text-util">
           <h4>
             O nome que você consultou está disponível.
           </h4>
         </div>
-    </div>
+      </div>
+      <button disabled type="submit" class="inline-button">Registrar Empresa</button>
 
 </form>
 
