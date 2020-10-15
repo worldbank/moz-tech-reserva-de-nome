@@ -33,19 +33,23 @@
   <div class="form-label">
     <label for="{{ form.name.id_for_label }}" required>{{ form.name.label }}</label>
     <input type="text" name="name" id="{{ form.name.id_for_label }}">
+    {{ form.name.errors }}
   </div>
   <div class="form-label">
     <label for="{{ form.number.id_for_label }}" required>{{ form.number.label }}</label>
     <input type="text" name="number" id="{{ form.number.id_for_label }}">
+    {{ form.number.errors }}
   </div>
   <div class="same-row">
     <div class="form-label">
       <label for="{{ form.expiry.id_for_label }}" required>{{ form.expiry.label }}</label>
       <input type="text" name="expiry" id="{{ form.expiry.id_for_label }}">
+      {{ form.expiry.errors }}
     </div>
     <div class="form-label">
       <label for="{{ form.cvv.id_for_label }}" required>{{ form.cvv.label }}</label>
       <input type="text" name="cvv" id="{{ form.cvv.id_for_label }}">
+      {{ form.cvv.errors }}
     </div>
   </div>
   <div class="align-right">

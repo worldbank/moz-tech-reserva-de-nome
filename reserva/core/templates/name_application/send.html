@@ -32,23 +32,27 @@
   <div class="form-label">
     <label for="{{ form.applicant.id_for_label }}" required>{{ form.applicant.label }} *</label>
     <input type="text" name="applicant" id="{{ form.applicant.id_for_label }}">
+    {{ form.applicant.errors }}
   </div>
   <div class="form-label">
     <label for="{{ form.dob.id_for_label }}" required>{{ form.dob.label }} *</label>
     <input type="text" name="dob" id="{{ form.dob.id_for_label }}">
+    {{ form.dob.errors }}
   </div>
   <div class="form-label">
-    <label for="{{ form.nationality.id_for_label }}">{{ form.nationality.label }}</label>
+    <label for="{{ form.nationality.id_for_label }}" required>{{ form.nationality.label }}</label>
     <select name="nationality" id="{{ form.nationality.id_for_label }}">
-      <option value="" default>-----</option>
+      <option value="" disabled selected>-----</option>
       {% for nationality in nationality_list %}
       <option value="{{ nationality.0 }}">{{ nationality.1 }}</option>
       {% endfor %}
     </select>
+    {{ form.nationality.errors }}
   </div>
   <div class="form-label">
-    <label for="{{ form.email.id_for_label }}">{{ form.email.label }}</label>
+    <label for="{{ form.email.id_for_label }}" required>{{ form.email.label }}</label>
     <input type="text" name="email" id="{{ form.email.id_for_label }}">
+    {{ form.email.errors }}
   </div>
   <div class="align-right">
     <button type="submit">Enviar</button>
