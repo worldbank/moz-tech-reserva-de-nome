@@ -15,7 +15,7 @@ def test_name_application():
         email="meu@no.me",
     )
     assert str(obj) == "minha empresa"
-    assert not obj.approved
+    assert obj.status == obj.PENDING
     assert isinstance(obj.hash_id, str)
     assert len(obj.hash_id) >= settings.HASH_ID_MIN_LENGTH
     assert obj == NameApplication.objects.from_hash_id(obj.hash_id)
@@ -31,12 +31,12 @@ def test_name_application_approval(admin_user):
         email="meu@no.me",
     )
 
-    obj.approved = True
-    obj.approved_by = admin_user
+    obj.status = obj.APPROVED
+    obj.moderated_by = admin_user
     obj.comments = "belo nome"
     obj.save()
-    assert obj.approved
-    assert obj.approved_by == admin_user
+    assert obj.status == obj.APPROVED
+    assert obj.moderated_by == admin_user
     assert obj.comments == "belo nome"
 
 
@@ -51,15 +51,17 @@ def test_faild_attempt_name_application_approval(django_user_model):
         email="meu@no.me",
     )
 
-    obj.approved = True
-    obj.approved_by = user
+    obj.status = obj.APPROVED
+    obj.moderated_by = user
     with pytest.raises(NameApplicationError) as error:
         obj.save()
 
-    obj = NameApplication.objects.first()  # reload form the database
-    assert error.value.args[0] == "Non-staff user cannot approve application."
-    assert not obj.approved
-    assert not obj.approved_by
+    assert (
+        error.value.args[0] == "Non-staff user cannot approve or reject applications."
+    )
+    obj = NameApplication.objects.first()  # reload from the database
+    assert obj.status == obj.PENDING
+    assert not obj.moderated_by
 
 
 @pytest.mark.django_db
@@ -71,9 +73,11 @@ def test_faild_attempt_to_create_approved_name_application(django_user_model):
             dob="1975-09-16",
             nationality=Nationality.objects.get(name="Moçambicano(a)"),
             email="meu@no.me",
-            approved=True,
+            status=NameApplication.APPROVED,
         )
-    expected = "Cannot approve application without user in `approved_by` field"
+    expected = (
+        "Cannot approve or reject application without user in `moderated_by` field"
+    )
     assert error.value.args[0] == expected
 
 
@@ -85,15 +89,16 @@ def test_name_application_removed_approval(admin_user):
         dob="1975-09-16",
         nationality=Nationality.objects.get(name="Moçambicano(a)"),
         email="meu@no.me",
-        approved=True,
-        approved_by=admin_user,
+        status=NameApplication.APPROVED,
+        moderated_by=admin_user,
         comments="belo nome",
     )
 
-    obj.approved = False
+    obj.status = obj.PENDING
+    obj.rejected_by = admin_user
     obj.save()
-    assert not obj.approved
-    assert not obj.approved_by
+    assert obj.status == obj.PENDING
+    assert not obj.moderated_by
     assert obj.comments == "belo nome"
 
 
@@ -123,8 +128,8 @@ def test_pending(admin_user):
     )
     assert NameApplication.objects.pending().count() == 1
 
-    obj.approved = True
-    obj.approved_by = admin_user
+    obj.status = NameApplication.APPROVED
+    obj.moderated_by = admin_user
     obj.comments = "belo nome"
     obj.save()
     assert not NameApplication.objects.pending().count()

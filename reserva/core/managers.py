@@ -8,7 +8,7 @@ class NameApplicationQuerySet(models.QuerySet):
         return not self.filter(name__iexact=name).exists()
 
     def pending(self):
-        return self.filter(approved=False)
+        return self.filter(status="P")  # TODO use constant wo/ cyclical import
 
     def from_hash_id(self, value):
         pk, *_ = hash_id.decode(value)

@@ -39,6 +39,15 @@ class NameApplicationError(Exception):
 
 
 class NameApplication(models.Model):
+    PENDING = "P"
+    APPROVED = "A"
+    REJECTED = "R"
+    STATUS = (
+        (PENDING, "Pendente"),
+        (APPROVED, "Aprovado"),
+        (REJECTED, "Rejeitado"),
+    )
+
     name = models.CharField("Nome da empresa", max_length=256, unique=True)
     applicant = models.CharField("Responsável", max_length=256)
     dob = models.DateField("Data de nascimento (dd/mm/aaaa)")
@@ -46,10 +55,10 @@ class NameApplication(models.Model):
         "Nationality", verbose_name="Nacionalidade", on_delete=models.PROTECT
     )
     email = models.EmailField("E-mail")
-    approved = models.BooleanField("Aprovado", default=False)
-    approved_by = models.ForeignKey(
+    status = models.CharField("Status", max_length=1, default=PENDING, choices=STATUS)
+    moderated_by = models.ForeignKey(
         "core.User",
-        verbose_name="Aprovado por",
+        verbose_name="Moderado por",
         null=True,
         blank=True,
         on_delete=models.PROTECT,
@@ -75,23 +84,26 @@ class NameApplication(models.Model):
             models.Index(fields=["created_at"]),
             models.Index(fields=["updated_at"]),
             models.Index(fields=["name"]),
-            models.Index(fields=["approved"]),
-            models.Index(fields=["approved_by"]),
+            models.Index(fields=["status"]),
+            models.Index(fields=["moderated_by"]),
         ]
 
 
 @receiver(models.signals.pre_save, sender=NameApplication)
-def manage_approved_by(sender, instance, **kwargs):
-    if not instance.approved:
-        instance.approved_by = None
+def manage_moderated_by(sender, instance, **kwargs):
+    if instance.status == NameApplication.PENDING:
+        instance.moderated_by = None
         return instance
 
-    if not instance.approved_by:
-        msg = "Cannot approve application without user in `approved_by` field"
+    if not instance.moderated_by:
+        msg = (
+            "Cannot approve or reject application without user in `moderated_by` field"
+        )
         raise NameApplicationError(msg)
 
-    if not instance.approved_by.is_staff:
-        raise NameApplicationError("Non-staff user cannot approve application.")
+    if not instance.moderated_by.is_staff:
+        msg = "Non-staff user cannot approve or reject applications."
+        raise NameApplicationError(msg)
 
     return instance
 
