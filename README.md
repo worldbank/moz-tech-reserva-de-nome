@@ -30,13 +30,15 @@
 
 ## API Web
 
-### `POST /api/name_application/available/`
+### GET /api/name_application/available/`
 
 #### Requisção
 
-| Campo  | Tipo  | Descrição                                      |
-| ------ | ----- | ---------------------------------------------- |
-| `name` | `str` | Nome de empresa para consultar disponibilidade |
+| Campo  | Descrição                                      |
+| ------ | ---------------------------------------------- |
+| `name` | Nome de empresa para consultar disponibilidade |
+
+Exemplo: `/api/name_application/available/?name=minha+empresa`.
 
 #### Resposta
 
@@ -44,6 +46,8 @@
 | ----------- | ------ | --------------------------- |
 | `name`      | `str`  | Nome de empresa consultado. |
 | `available` | `bool` | Disponibilidade.            |
+
+Exemplo: `{"available": true, "name": "minha empresa"}`.
 
 ## Desenvolvimento
 
