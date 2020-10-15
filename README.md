@@ -30,7 +30,7 @@
 
 ## API Web
 
-### GET /api/name_application/available/`
+### `GET /api/name_application/available/`
 
 #### Requisção
 
