@@ -30,7 +30,34 @@
 
 <form class="pay-name-application" action="{% url 'name_application:pay' %}" method="post">
   {% csrf_token %}
-  {{ form.as_p }}
-  <button type="submit">Confirmar pedido de reserva de nome</button>
+  <div class="form-label">
+    <label for="{{ form.name.id_for_label }}" required>{{ form.name.label }}</label>
+    <input type="text" name="name" id="{{ form.name.id_for_label }}">
+  </div>
+  <div class="form-label">
+    <label for="{{ form.number.id_for_label }}" required>{{ form.number.label }}</label>
+    <input type="text" name="number" id="{{ form.number.id_for_label }}">
+  </div>
+  <div class="same-row">
+    <div class="form-label">
+      <label for="{{ form.expiry.id_for_label }}" required>{{ form.expiry.label }}</label>
+      <input type="text" name="expiry" id="{{ form.expiry.id_for_label }}">
+    </div>
+    <div class="form-label">
+      <label for="{{ form.cvv.id_for_label }}" required>{{ form.cvv.label }}</label>
+      <input type="text" name="cvv" id="{{ form.cvv.id_for_label }}">
+    </div>
+  </div>
+  <div class="form-label">
+    <label for="{{ form.address1.id_for_label }}" required>{{ form.address1.label }}</label>
+    <input type="text" name="address1" id="{{ form.address1.id_for_label }}">
+  </div>
+  <div class="form-label">
+    <label for="{{ form.address2.id_for_label }}" required>{{ form.address2.label }}</label>
+    <input type="text" name="address2" id="{{ form.address2.id_for_label }}">
+  </div>
+  <div class="align-right">
+    <button type="submit">Confirmar pedido de reserva de nome</button>
+  </div>
 </form>
 {% endblock %}

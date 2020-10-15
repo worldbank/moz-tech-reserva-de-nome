@@ -29,8 +29,34 @@
 
 <form class="send-name-application" action="{% url 'name_application:send' %}" method="post">
   {% csrf_token %}
-  {{ form.as_p }}
-  <button type="submit">Próximo passo</button>
+  <div class="form-label">
+    <label for="{{ form.applicant.id_for_label }}" required>{{ form.applicant.label }} *</label>
+    <input type="text" name="applicant" id="{{ form.applicant.id_for_label }}">
+  </div>
+  <div class="form-label">
+    <label for="{{ form.dob.id_for_label }}" required>{{ form.dob.label }} *</label>
+    <input type="text" name="dob" id="{{ form.dob.id_for_label }}">
+  </div>
+  <div class="form-label">
+    <label for="{{ form.nationality.id_for_label }}">{{ form.nationality.label }}</label>
+    <select name="nationality" id="{{ form.nationality.id_for_label }}">
+      <option value="" default>-----</option>
+      {% for nationality in nationality_list %}
+      <option value="{{ nationality.0 }}">{{ nationality.1 }}</option>
+      {% endfor %}
+    </select>
+  </div>
+  <div class="form-label">
+    <label for="{{ form.address1.id_for_label }}">{{ form.address1.label }}</label>
+    <input type="text" name="address1" id="{{ form.address1.id_for_label }}">
+  </div>
+  <div class="form-label">
+    <label for="{{ form.address2.id_for_label }}">{{ form.address2.label }}</label>
+    <input type="text" name="address2" id="{{ form.address2.id_for_label }}">
+  </div>
+  <div class="align-right">
+    <button type="submit">Enviar</button>
+  </div>
 </form>
 
 {% endblock %}
