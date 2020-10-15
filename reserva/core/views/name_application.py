@@ -38,7 +38,11 @@ def send(request):
         request.session["form"]["nationality"] = DEFAULT_NATIONALITY
         nationality_list = Nationality.objects.values_list("pk", "name")
         form = SendForm(request.session["form"])
-        return render(request, "name_application/send.html", {"form": form, "nationality_list": nationality_list})
+        return render(
+            request,
+            "name_application/send.html",
+            {"form": form, "nationality_list": nationality_list},
+        )
 
     form = SendForm(request.POST)
     if not form.is_valid():
