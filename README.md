@@ -1,4 +1,4 @@
-# 🇲🇿 Reserva de Nome 
+# 🇲🇿 Conservatória: Reserva de Nome [![Tests](https://github.com/worldbank/moz-tech-reserva-de-nome/workflows/Tests/badge.svg)](https://github.com/worldbank/moz-tech-reserva-de-nome/actions)
 
 ## Requisitos
 
