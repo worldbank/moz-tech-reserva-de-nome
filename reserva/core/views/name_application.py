@@ -38,6 +38,7 @@ def send(request):
         request.session["form"]["nationality"] = DEFAULT_NATIONALITY
         nationality_list = Nationality.objects.values_list("pk", "name")
         form = SendForm(request.session["form"])
+        form.from_session = True
         return render(
             request,
             "name_application/send.html",
@@ -46,7 +47,12 @@ def send(request):
 
     form = SendForm(request.POST)
     if not form.is_valid():
-        return render(request, "name_application/send.html", {"form": form})
+        nationalities = Nationality.objects.values_list("pk", "name")
+        return render(
+            request,
+            "name_application/send.html",
+            {"form": form, "nationalities": nationalities},
+        )
 
     data = form.cleaned_data.copy()
     data["name"] = request.session["form"]["name"]
