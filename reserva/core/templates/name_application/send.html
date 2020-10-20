@@ -42,9 +42,10 @@
   <div class="form-label">
     <label for="{{ form.nationality.id_for_label }}" required>{{ form.nationality.label }}</label>
     <select name="nationality" id="{{ form.nationality.id_for_label }}">
-      <option value="" disabled selected>-----</option>
-      {% for nationality in nationality_list %}
-      <option value="{{ nationality.0 }}">{{ nationality.1 }}</option>
+      {% for value, label in nationalities %}
+      <option value="{{ value }}"{% if form.nationality.value == value|slugify %} selected{% endif %}>
+        {{ label }}
+      </option>
       {% endfor %}
     </select>
     {% if not form.from_session %}{{ form.nationality.errors }}{% endif %}

@@ -36,13 +36,13 @@ def send(request):
 
     if request.method == "GET":
         request.session["form"]["nationality"] = DEFAULT_NATIONALITY
-        nationality_list = Nationality.objects.values_list("pk", "name")
         form = SendForm(request.session["form"])
         form.from_session = True
+        nationalities = Nationality.objects.values_list("pk", "name")
         return render(
             request,
             "name_application/send.html",
-            {"form": form, "nationality_list": nationality_list},
+            {"form": form, "nationalities": nationalities},
         )
 
     form = SendForm(request.POST)
