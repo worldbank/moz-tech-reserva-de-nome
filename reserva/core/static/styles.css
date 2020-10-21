@@ -26,7 +26,7 @@
 
 .wrapper {
   width: 100%;
-  height: 100vh;
+  height: 100%;
 }
 
 /* NAV E HEADER  */
@@ -271,24 +271,18 @@ strong.insider {
   height: 30px;
 }
 
-hr {
-  margin-left: 40px;
-  max-width: 420px;
-  border: 4px solid var(--grey-light);
-  position: relative;
-}
-
 #stepProgressBar {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   width: 500px;
-  margin-top: -25px;
+  border-top: 8px solid var(--grey-light);
 }
 
 .step {
   text-align: center;
   font-weight: bold;
+  margin-top: -25px;
 }
 
 p.insider code {
@@ -357,20 +351,25 @@ select {
 }
 
 .check-name {
-  width: 90%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 3rem;
 }
 
 .same-row {
+  width: 80%;
   display: flex;
   justify-content: space-between;
 }
 
 .same-row > .form-label {
-  min-width: 49%;
+  max-width: 47%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .form-label {
@@ -378,7 +377,7 @@ select {
   text-align: left;
   font-weight: bold;
   color: var(--black);
-  min-width: 550px;
+  width: 80%;
   display: flex;
   flex-direction: column;
 }
@@ -414,4 +413,80 @@ ul.errorlist {
 footer {
   background-color: var(--green-dark);
   height: 200px;
+}
+
+/* MOBILE RESPOSIVE */
+
+@media only screen and (max-width: 600px) {
+  .nav {
+    padding: 0 2rem;
+  }
+  .content-header {
+    padding: 0 2rem;
+  }
+
+  .main-content {
+    padding: 2rem;
+  }
+
+  aside {
+    display: none;
+  }
+
+  section {
+    margin-left: 0;
+    max-width: 85vw;
+  }
+
+  #stepProgressBar {
+    max-width: 85vw;
+  }
+
+  .form-label {
+    width: 100%;
+  }
+
+  .same-row {
+    width: 100%;
+  }
+
+  .same-row > .form-label {
+    max-width: 47%;
+  }
+
+  .align-right {
+    justify-content: center;
+  }
+
+  .warning.yellow {
+    margin: 2rem 0;
+  }
+
+  .warning.brown {
+    height: 160px;
+  }
+
+  .text-util h4 {
+    margin-right: 1rem;
+  }
+
+  .something-wrog {
+    margin-top: 0.5rem;
+  }
+
+  .warning {
+    padding: 0 1rem;
+  }
+
+  .warning.yellow {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .envelope,
+  .exclamation,
+  .check {
+    margin-right: 1rem;
+  }
 }
